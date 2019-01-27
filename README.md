@@ -1,3 +1,3 @@
 # calculator-js
 
-![My image](jgg88.github.com/calculator-js/img/screenshot.png)
+![My image](jgg88.github.com/images/screenshotcalcjs.png)
