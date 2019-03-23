@@ -1,7 +1,21 @@
+.clear {grid-area: clear;}
+.integer9 {grid-area: integer9;}
+.integer8 {grid-area: integer8;}
+.integer7 {grid-area: integer7;}
+.integer6 {grid-area: integer6;}
+.integer5 {grid-area: integer5;}
+.integer4 {grid-area: integer4;}
+.integer3 {grid-area: integer3;}
+.integer2 {grid-area: integer2;}
+.integer1 {grid-area: integer1;}
+.integer0 {grid-area: integer0;}
+.decimal {grid-area: decimal;}
+.equals {grid-area: equals;}
+
 body {
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
+    /* margin: 0 auto; */
+    /* display: flex;
+    justify-content: center; */
     background-color: #37c599;
 }
 
@@ -15,13 +29,12 @@ header img {
 }
 
 #calculator {
+    margin: 0 auto;
+    margin-top: 100px;
     background-color: #f7f6f4;
     width: 360px;
     height: 530px;
     padding: 20px 10px 10px 10px;
-    text-align: center;
-    position: absolute;
-    top: 100px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
@@ -43,7 +56,14 @@ button:focus {
 
 #integer-body {
     float: left;
-    width: 270px;
+    /* width: 270px; */
+    display: grid;
+    grid-template-areas:
+    'clear clear clear'
+    'integer9 integer8 integer7'
+    'integer6 integer5 integer4'
+    'integer3 integer2 integer1'
+    'decimal integer0 equals';
 }
 
 .integer, .decimal {

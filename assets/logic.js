@@ -13,12 +13,6 @@ let calculator, x, y, prevX, prevY;
 //TESTING HERE ========
 let el = document.getElementById('calculator'); 
 
-//   el.addEventListener("touchstart", handleStart, false);
-//   el.addEventListener("touchend", handleEnd, false);
-//   el.addEventListener("touchcancel", handleCancel, false);
-//   el.addEventListener("touchleave", handleEnd, false);
-//   el.addEventListener("touchmove", handleMove, false);
-
 integers.addEventListener('click', num => {
     let currentValue = num.target.innerHTML;
 
@@ -69,10 +63,7 @@ calculate = () => {
 }
 
 drag = (e) => {
-    // console.log('here', e.target.offsetLeft)
  calculator = e.target
-
-//  console.log(e)
  prevX = x - calculator.offsetLeft;
  prevY = y - calculator.offsetTop;
 }
@@ -100,9 +91,7 @@ document.onmousemove = cursorPos;
 document.onmouseup = drop;
 
 
-
+//touch events for mobile devices *currently not reliable
 el.addEventListener("touchstart", drag, false);
-//   el.addEventListener("touchend", handleEnd, false);
-//   el.addEventListener("touchcancel", handleCancel, false);
-  el.addEventListener("touchleave", drop, false);
-  el.addEventListener("touchmove", cursorPos, false);
+el.addEventListener("touchleave", drop, false);
+el.addEventListener("touchmove", cursorPos, false);
