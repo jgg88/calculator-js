@@ -13,10 +13,9 @@
 .equals {grid-area: equals;}
 
 body {
-    /* margin: 0 auto; */
-    /* display: flex;
-    justify-content: center; */
     background-color: #37c599;
+    display: flex;
+    justify-content: center;
 }
 
 header{
@@ -30,7 +29,8 @@ header img {
 
 #calculator {
     margin: 0 auto;
-    margin-top: 100px;
+    position: absolute;
+    top: 100px;
     background-color: #f7f6f4;
     width: 360px;
     height: 530px;
@@ -56,7 +56,6 @@ button:focus {
 
 #integer-body {
     float: left;
-    /* width: 270px; */
     display: grid;
     grid-template-areas:
     'clear clear clear'

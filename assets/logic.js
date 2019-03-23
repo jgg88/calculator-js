@@ -1,6 +1,6 @@
 const integers = document.querySelector("#integer-body");
 const operators = document.querySelector("#operator-body");
-let el = document.getElementById('calculator'); 
+const el = document.getElementById('calculator'); 
 
 //valuables for operations
 let result = document.querySelector("#result")
@@ -59,9 +59,9 @@ calculate = () => {
 }
 
 drag = (e) => {
- calculator = e.target
- prevX = x - calculator.offsetLeft;
- prevY = y - calculator.offsetTop;
+    calculator = e.target;
+    prevX = x - calculator.offsetLeft;
+    prevY = y - calculator.offsetTop;
 }
 
 //observes mouse's position on document
@@ -72,7 +72,6 @@ cursorPos = (e) => {
     }
     //if calculator is selected, then set to current position
     if (calculator) {
-        console.log('in cursorPos')
         calculator.style.left = `${x - prevX}px`;
         calculator.style.top = `${y - prevY}px`;
     }
@@ -87,7 +86,7 @@ document.onmousemove = cursorPos;
 document.onmouseup = drop;
 
 
-//touch events for mobile devices *currently not reliable
+//To allow dragging on mobile devices *not reliable, currently
 el.addEventListener("touchstart", drag, false);
 el.addEventListener("touchleave", drop, false);
 el.addEventListener("touchmove", cursorPos, false);
