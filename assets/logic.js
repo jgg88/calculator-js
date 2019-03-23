@@ -1,5 +1,6 @@
 const integers = document.querySelector("#integer-body");
 const operators = document.querySelector("#operator-body");
+let el = document.getElementById('calculator'); 
 
 //valuables for operations
 let result = document.querySelector("#result")
@@ -7,11 +8,6 @@ let firstNumber, secondNumber, operatorType;
 
 //variables for dragging calculator
 let calculator, x, y, prevX, prevY;
-
-
-
-//TESTING HERE ========
-let el = document.getElementById('calculator'); 
 
 integers.addEventListener('click', num => {
     let currentValue = num.target.innerHTML;
